@@ -1,5 +1,8 @@
 # Projeto final
 
+from time import sleep
+
+
 def welcome():
     print('''
     Bem vindo a calculadora Python!!!
@@ -7,14 +10,14 @@ def welcome():
 
 
 def calculator():
-    operator = input('''Insira a operação logica
+    operator = str(input('''Insira a operação logica
      + Para Adição
      - Para Subtração
      / Para Divisão
      * Para Multiplicação 
-     : ''')
-    numero1 = int(input('Insira o primeiro numero: '))
-    numero2 = int(input('Insira o segundo numero: '))
+     : '''))
+    numero1 = float(input('Insira o primeiro numero: '))
+    numero2 = float(input('Insira o segundo numero: '))
 
     if operator == '+':
         print(f'{numero1} + {numero2} =', numero1 + numero2)
@@ -38,6 +41,7 @@ def again():
     # Caso o usuário digite 'N' código encerra e exibirá uma mensagem de despedida
     elif calc_again.upper() == 'N':
         print('Vejo você mais tarde...')
+        sleep(5)
     else:
         again()
 
